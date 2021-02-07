@@ -1,13 +1,37 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { render } from 'react-dom';
+import loadable from '@loadable/component';
+import { Provider } from 'react-redux';
+import { Row, Col } from 'antd';
+import styled from 'styled-components';
+import store from './redux';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+const Quote = styled.p`
+  line-height: 100vh;
+  color: #ffffff;
+  text-align: center;
+  drop-shadow: 20px 20px 20px #ccc;
+  font-size: 2rem;
+  font-weight: 900;
+`;
+
+const Antd = loadable.lib(() => import('antd/dist/antd.css'));
+
+const AppComponent = loadable(() => import('./App'), {
+fallback: <Row justify="center" align="middle">
+  <Col>
+  <Quote>Be the change you wish to see</Quote>
+  </Col>
+</Row>
+});
+
+render(
+  <Provider store={store}>
+    <Antd />
+    <AppComponent />
+  </Provider>,
   document.getElementById('root')
 );
 
