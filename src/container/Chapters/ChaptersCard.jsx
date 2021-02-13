@@ -5,13 +5,19 @@ import { Card as MyCard } from "antd";
 import C1i from "../../assets/ch1.jpg";
 
 const Card = styled(MyCard)`
-  margin: 0 5px 5px 5px;
+  margin: 0 0px 0px 5px;
   width: 240px;
   border: none;
   border-radius: 0;
+  box-shadow: 2px 4px 5px #111;
+  transition: transform 3s ease;
 
   img {
     height: 240px !important;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
   }
 `;
 
