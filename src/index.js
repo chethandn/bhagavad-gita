@@ -18,6 +18,7 @@ const Quote = styled.p`
 `;
 
 const Antd = loadable.lib(() => import('antd/dist/antd.css'));
+const Theme = loadable.lib(() => import('../src/scss/index.scss'));
 
 const AppComponent = loadable(() => import('./App'), {
 fallback: <Row justify="center" align="middle">
@@ -30,6 +31,7 @@ fallback: <Row justify="center" align="middle">
 render(
   <Provider store={store}>
     <Antd />
+    <Theme />
     <AppComponent />
   </Provider>,
   document.getElementById('root')

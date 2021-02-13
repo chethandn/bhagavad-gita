@@ -1,0 +1,14 @@
+#chapters {
+  animation: anim2 2s forwards 1s;
+}
+
+@keyframes anim2 {
+  0% {
+    opacity: 0;
+    transform: translate(2%, -10%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,45 @@
+#container {
+  height: 100vh !important;
+  position: relative;
+  background-image: linear-gradient(315deg, #36096d 0%, #0f0ca8 74%);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  animation: anim 2s forwards 1s;
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#box-2 {
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  margin: auto;
+  text-align: center;
+  animation: text-anim 2s forwards 1s;
+
+  #h1 {
+    color: #fff;
+    font-size: 5.5rem !important;
+    text-shadow: 2px 7px 5px #111;
+    font-weight: 500;
+  }
+}
+
+@keyframes text-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
