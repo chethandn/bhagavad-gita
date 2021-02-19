@@ -1,11 +1,14 @@
 #chapters {
   animation: anim2 2s forwards 1s;
+  text-align: center;
+  position: relative;
+  top: 65px;
 }
 
 @keyframes anim2 {
   0% {
     opacity: 0;
-    transform: translate(2%, -10%);
+    transform: translateY(2%);
   }
   100% {
     opacity: 1;
