@@ -1,0 +1,35 @@
+.ant-menu {
+  position: fixed !important;
+  top: 0;
+  z-index: 2000;
+  width: 100% !important;
+  background-image: linear-gradient(10deg, #36096d 0%, #0f0ca8 74%) !important;
+  box-shadow: 0px 0px 10px 0px #111;
+  border-bottom: none !important;
+  display: flex;
+  align-items: center;
+
+  .nav-items {
+    margin-left: auto;
+    display: flex;
+    padding: 0 20px;
+    cursor: pointer;
+
+    li a {
+      padding: 0 10px;
+      color: #fff !important;
+
+      &:hover {
+        color: rgb(89, 173, 230) !important;
+      }
+    }
+  }
+
+  h1.ant-typography {
+    color: #fff !important;
+    font-size: 2rem !important;
+    text-shadow: 2px 7px 5px #111;
+    font-weight: 500;
+    padding: 5px 5px 0 5px;
+  }
+}
