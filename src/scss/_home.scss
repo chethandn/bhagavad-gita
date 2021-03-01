@@ -1,36 +1,62 @@
-#container {
-  height: 100vh !important;
+.wrapper {
+  min-height: calc(100vh - 60px);
+  // background: #fff;
+  background: transparent;
+  padding: 16px;
   position: relative;
-  top: 65px;
-  background-image: linear-gradient(315deg, #36096d 0%, #0f0ca8 74%);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-}
+  top: 60px !important;
 
-#box-2 {
-  position: absolute;
-  width: 100%;
-  top: 35%;
-  margin: auto;
-  text-align: center;
-  animation: text-anim 2s forwards 1s;
-
-  #h1 {
-    color: #fff;
-    font-size: 5.5rem !important;
-    text-shadow: 2px 7px 5px #111;
-    font-weight: 500;
-  }
-}
-
-@keyframes text-anim {
-  0% {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  100% {
+  h1 {
+    color: rgb(0, 0, 0);
+    font-size: 7rem;
+    font-weight: 900;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: textAnimation 1s;
     opacity: 1;
-    transform: none;
+    width: 80%;
+    background-image: url("../assets/chariot1.jpg");
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    padding: 0;
+    background-color: transparent;
+  }
+  h1 {
+    font-size: 3rem !important;
+    width: 90%;
+    transition: 1s ease-in;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    padding: 0;
+    background-color: transparent;
+  }
+  h1 {
+    font-size: 2.2rem !important;
+    width: 90%;
+    transition: 1s ease-in;
+  }
+}
+
+@keyframes textAnimation {
+  from {
+    top: 40%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
   }
 }
