@@ -16,18 +16,18 @@
 
 @media only screen and (max-width: 900px) {
   .chapter-row {
-    padding: 0;
+    padding: 10px 0 !important;
     background: transparent;
-    width: 90% !important;
+    width: 100% !important;
     transition: 1s ease-in;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .chapter-row {
-    padding: 0;
+    padding: 10px 0 !important;
     background: transparent;
-    width: 90% !important;
+    width: 100% !important;
     transition: 1s ease-in;
   }
 }
