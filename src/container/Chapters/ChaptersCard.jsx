@@ -1,52 +1,69 @@
 import React from "react";
 import styled from "styled-components";
-import { Card as MyCard } from "antd";
+import { Card as MyCard, CardBody, CardHeader } from "reactstrap";
 import { Link } from "react-router-dom";
 
 import C1i from "../../assets/gita.png";
 
 const Card = styled(MyCard)`
-  margin: 5px 10px !important;
-  width: 240px;
-  height: 360px !important
-  max-height: 360px !important;
-  border: none;
-  border-radius: 0;
-  box-shadow: 0px 0px 5px 0px #111;
-  transition: all 3s ease-out;
+  width: 100%;
+  height: auto;
+  max-height: 350px !important;
+  transition: all 0.5s ease-out;
   z-index: 100;
-  background-image: linear-gradient(115deg, #36096d 0%, #0f0ca8 90%) !important;
-  color: #fff !important
+  background: transparent;
+  object-fit: cover;
+  overflow: hidden;
+  box-shadow: 0 5px 10px 0 rgba(31, 38, 135, 0.37);
+  border: none !important;
 
   img {
-    height: 240px !important;
+    width: 100%;
+    height: 240px;
   }
 
   &:hover {
-    transform: scale(1.01);
-    border: none !important;
+    transform: translateY(-10px);
     z-index: 1000;
+    text-decoration: none;
   }
 
-  a, h3, h5, h4 {
-    color: #fff !important;
+  a,
+  h6,
+  p {
+    color: #111 !important;
+    text-decoration: none !important;
+  }
+
+  p {
+    font-size: 13px !important;
+    margin: 0 5px !important;
+  }
+
+  .card-body {
+    background: rgba(55, 185, 238, 0.4);
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+    overflow: hidden;
   }
 `;
 
 const ChaptersCard = ({ title, verseCount, chapterNumber }) => {
   return (
-    <Link to={`/chapter/${chapterNumber}`}>
-      <Card
-        bordered={false}
-        hoverable
-        cover={<img alt="Chapter 1" src={C1i} />}
-        bodyStyle={{ padding: 14, textAlign: "justify" }}
-      >
-        <h3 style={{ margin: 0 }}>Chapter {chapterNumber}</h3>
-        <h5>{verseCount} verses</h5>
-        <h4>{title}</h4>
-      </Card>
-    </Link>
+    <Card>
+      <Link to={`/chapter/${chapterNumber}`}>
+        <CardHeader className="p-0 border-0">
+          <img alt="Chapter 1" src={C1i} />
+        </CardHeader>
+        <CardBody>
+          <h6>Chapter {chapterNumber}</h6>
+          <p>
+            <i>{verseCount} verses</i>
+          </p>
+          <p>{title}</p>
+        </CardBody>
+      </Link>
+    </Card>
   );
 };
 

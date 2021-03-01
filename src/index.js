@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import loadable from '@loadable/component';
 import { Provider } from 'react-redux';
-import { Row, Col } from 'antd';
+import { Row, Col } from 'reactstrap';
 import styled from 'styled-components';
 import store from './redux';
 import './index.scss';
@@ -17,27 +17,24 @@ const Quote = styled.p`
   font-weight: 900;
 `;
 
-const Antd = loadable.lib(() => import('antd/dist/antd.css'));
-const Theme = loadable.lib(() => import('../src/scss/index.scss'));
+const Bootstrap = loadable.lib(() => import('bootstrap/dist/css/bootstrap.min.css'));
+const Theme = loadable.lib(() => import('./scss/index.scss'));
 
 const AppComponent = loadable(() => import('./App'), {
-fallback: <Row justify="center" align="middle">
-  <Col>
-  <Quote>Be the change you wish to see</Quote>
-  </Col>
-</Row>
+  fallback: <Row className="justify-content-center align-items-center">
+    <Col>
+      <Quote>Be the change you wish to see</Quote>
+    </Col>
+  </Row>
 });
 
 render(
   <Provider store={store}>
-    <Antd />
+    <Bootstrap />
     <Theme />
     <AppComponent />
   </Provider>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

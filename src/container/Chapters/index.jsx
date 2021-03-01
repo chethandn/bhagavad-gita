@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { Row, Col, Typography, Spin } from "antd";
+import { Row, Col, Container } from "reactstrap";
 import ChaptersCard from "./ChaptersCard";
 import { getChapters } from "../../redux/actions/chapters";
 
+import Skeleton from "../Skeleton";
+
 const Chapters = ({ chapters, fetchChapters }) => {
   const [sortedList, setList] = useState([]);
-  const { Title } = Typography;
+  let skeletons = [];
+
+  for (let index = 0; index < 12; index++) {
+    skeletons.push(
+      <Col className="p-1" key={index + 1}>
+        <Skeleton />
+      </Col>
+    );
+  }
 
   const init = async () => {
     await fetchChapters();
@@ -24,28 +34,26 @@ const Chapters = ({ chapters, fetchChapters }) => {
   }, [chapters]);
 
   return (
-    <section id="container">
-      <div id="chapters">
-        <Title>Chapters</Title>
-        <Row justify="space-around">
-          {!sortedList.length ? (
-            <Col>
-              <Spin />
-            </Col>
-          ) : (
-            sortedList.map((chapter) => (
-              <Col span={4} key={chapter.chapter_number}>
-                <ChaptersCard
-                  title={chapter.translation}
-                  chapterNumber={chapter.chapter_number}
-                  verseCount={chapter.verses_count}
-                />
-              </Col>
-            ))
-          )}
+    <Container fluid className="wrapper">
+      <h2 className="text-center text-dark pt-2 pb-3">Chapters</h2>
+      {!sortedList.length ? (
+        <Row xs="1" sm="2" md="3" xl="6" className="no-gutters">
+          {skeletons}
         </Row>
-      </div>
-    </section>
+      ) : (
+        <Row xs="1" sm="2" md="3" xl="6" className="no-gutters">
+          {sortedList.map((chapter) => (
+            <Col key={chapter.chapter_number} className="p-2">
+              <ChaptersCard
+                title={chapter.translation}
+                chapterNumber={chapter.chapter_number}
+                verseCount={chapter.verses_count}
+              />
+            </Col>
+          ))}
+        </Row>
+      )}
+    </Container>
   );
 };
 

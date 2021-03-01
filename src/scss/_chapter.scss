@@ -1,4 +1,33 @@
-#container {
-  position: relative;
-  top: 65px;
+.chapter-row {
+  width: 65% !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  transition: 1s ease-in;
+  background: rgba(55, 185, 238, 0.4);
+  box-shadow: 0 6px 12px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 30px;
+  border: none !important;
+}
+
+@media only screen and (max-width: 900px) {
+  .chapter-row {
+    padding: 0;
+    background: transparent;
+    width: 90% !important;
+    transition: 1s ease-in;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .chapter-row {
+    padding: 0;
+    background: transparent;
+    width: 90% !important;
+    transition: 1s ease-in;
+  }
 }

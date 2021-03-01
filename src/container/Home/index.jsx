@@ -1,12 +1,11 @@
 import React from "react";
+import { Container } from "reactstrap";
 
 const Home = () => {
   return (
-    <section id="container">
-      <div id="box-2">
-        <h1 id="h1">Bhagavad Gita</h1>
-      </div>
-    </section>
+    <Container fluid className="wrapper text-center">
+      <h1>Bhagavad Gita</h1>
+    </Container>
   );
 };
 
