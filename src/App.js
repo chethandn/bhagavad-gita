@@ -16,9 +16,9 @@ const App = () => {
       <Navbar />
       <Router>
         <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/chapters" component={Chapters} exact />
-          <Route path="/chapter/:flag" component={Chapter} />
+          <Route path="/bhagavad-gita/" component={Home} exact />
+          <Route path="/bhagavad-gita/chapters" component={Chapters} exact />
+          <Route path="/bhagavad-gita/chapter/:flag" component={Chapter} />
         </Switch>
       </Router>
     </div>

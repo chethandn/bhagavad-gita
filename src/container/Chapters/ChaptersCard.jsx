@@ -51,7 +51,7 @@ const Card = styled(MyCard)`
 const ChaptersCard = ({ title, verseCount, chapterNumber }) => {
   return (
     <Card>
-      <Link to={`/chapter/${chapterNumber}`}>
+      <Link to={`/bhagavad-gita/chapter/${chapterNumber}`}>
         <CardHeader className="p-0 border-0">
           <img alt="Chapter 1" src={C1i} />
         </CardHeader>
