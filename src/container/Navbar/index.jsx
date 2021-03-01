@@ -37,15 +37,15 @@ const Navigationbar = (props) => {
 
   return (
     <Navbar light expand="md" className="px-4">
-      <NavbarBrand href="/bhagavad-gita/">Bhagavad Gita</NavbarBrand>
+      <NavbarBrand href="/">Bhagavad Gita</NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink href="/bhagavad-gita/">Home</NavLink>
+            <NavLink href="/">Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/bhagavad-gita/chapters">Chapters</NavLink>
+            <NavLink href="/chapters">Chapters</NavLink>
           </NavItem>
         </Nav>
       </Collapse>
