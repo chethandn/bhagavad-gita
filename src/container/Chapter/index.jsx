@@ -19,8 +19,8 @@ const Chapter = ({ fetchChapter, chapter }) => {
   }, []);
 
   return (
-    <Container fluid className="wrapper">
-      <Row className="chapter-row p-2">
+    <Container fluid className="wrapper p-0">
+      <Row className="chapter-row no-gutters p-3">
         <Col>
           <h3 className="text-center py-3">{`Chapter ${chapter?.chapter_number}`}</h3>
           <h5 className="text-center">{chapter?.verse_count}</h5>

@@ -1,8 +1,8 @@
 .chapter-row {
   width: 65% !important;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 50% !important;
+  top: 50% !important;
   transform: translate(-50%, -50%);
   justify-content: center;
   transition: 1s ease-in;
@@ -16,18 +16,26 @@
 
 @media only screen and (max-width: 900px) {
   .chapter-row {
-    padding: 10px 0 !important;
+    position: absolute;
+    left: 0 !important;
+    top: 0 !important;
+    transform: translate(0);
     background: transparent;
     width: 100% !important;
     transition: 1s ease-in;
+    border-radius: 0;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .chapter-row {
-    padding: 10px 0 !important;
+    position: absolute;
+    left: 0 !important;
+    top: 0 !important;
+    transform: translate(0);
     background: transparent;
     width: 100% !important;
     transition: 1s ease-in;
+    border-radius: 0;
   }
 }
