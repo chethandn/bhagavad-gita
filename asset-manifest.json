@@ -3,15 +3,15 @@
     "main.css": "/bhagavad-gita/static/css/main.8c38aeeb.chunk.css",
     "main.js": "/bhagavad-gita/static/js/main.435f2f79.chunk.js",
     "main.js.map": "/bhagavad-gita/static/js/main.435f2f79.chunk.js.map",
-    "runtime-main.js": "/bhagavad-gita/static/js/runtime-main.551d851e.js",
-    "runtime-main.js.map": "/bhagavad-gita/static/js/runtime-main.551d851e.js.map",
+    "runtime-main.js": "/bhagavad-gita/static/js/runtime-main.daf63a92.js",
+    "runtime-main.js.map": "/bhagavad-gita/static/js/runtime-main.daf63a92.js.map",
     "static/js/2.e2df79b7.chunk.js": "/bhagavad-gita/static/js/2.e2df79b7.chunk.js",
     "static/js/2.e2df79b7.chunk.js.map": "/bhagavad-gita/static/js/2.e2df79b7.chunk.js.map",
     "static/js/3.d1c9a3d0.chunk.js": "/bhagavad-gita/static/js/3.d1c9a3d0.chunk.js",
     "static/js/3.d1c9a3d0.chunk.js.map": "/bhagavad-gita/static/js/3.d1c9a3d0.chunk.js.map",
     "static/css/4.afd7172b.chunk.css": "/bhagavad-gita/static/css/4.afd7172b.chunk.css",
-    "static/js/4.d17504ff.chunk.js": "/bhagavad-gita/static/js/4.d17504ff.chunk.js",
-    "static/js/4.d17504ff.chunk.js.map": "/bhagavad-gita/static/js/4.d17504ff.chunk.js.map",
+    "static/js/4.be9cdfda.chunk.js": "/bhagavad-gita/static/js/4.be9cdfda.chunk.js",
+    "static/js/4.be9cdfda.chunk.js.map": "/bhagavad-gita/static/js/4.be9cdfda.chunk.js.map",
     "static/css/5.d5e1b25b.chunk.css": "/bhagavad-gita/static/css/5.d5e1b25b.chunk.css",
     "static/js/5.68b4cd69.chunk.js": "/bhagavad-gita/static/js/5.68b4cd69.chunk.js",
     "static/js/5.68b4cd69.chunk.js.map": "/bhagavad-gita/static/js/5.68b4cd69.chunk.js.map",
@@ -31,7 +31,7 @@
     "static/media/gita.b36b22c5.png": "/bhagavad-gita/static/media/gita.b36b22c5.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.551d851e.js",
+    "static/js/runtime-main.daf63a92.js",
     "static/js/2.e2df79b7.chunk.js",
     "static/css/main.8c38aeeb.chunk.css",
     "static/js/main.435f2f79.chunk.js"
