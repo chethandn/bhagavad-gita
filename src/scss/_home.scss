@@ -22,6 +22,44 @@
     -webkit-text-fill-color: transparent;
     -webkit-font-smoothing: antialiased;
   }
+
+  .Chapter-button {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: buttonAnimation 1s;
+    opacity: 1;
+    background-color: rgb(6, 4, 99);
+    padding: 5px 10px;
+    border-radius: 30px;
+    height: 48px;
+    width: 10%;
+    border: 0.5px solid rgb(6, 4, 99);
+    font-weight: 500;
+    transition: 0.5s ease;
+
+    &:hover,
+    &:active {
+      background-color: rgb(3, 2, 66);
+      border-radius: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .wrapper {
+    padding: 0;
+    background-color: transparent;
+  }
+  h1 {
+    font-size: 6rem !important;
+    width: 90% !important;
+    transition: 1s ease-in;
+  }
+  .Chapter-button {
+    width: 30% !important;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -34,6 +72,10 @@
     width: 90%;
     transition: 1s ease-in;
   }
+  .Chapter-button {
+    width: 35%;
+    font-size: 14px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -42,9 +84,14 @@
     background-color: transparent;
   }
   h1 {
-    font-size: 2.2rem !important;
-    width: 90%;
+    font-size: 2.4rem !important;
+    width: 70%;
     transition: 1s ease-in;
+  }
+  .Chapter-button {
+    width: 80%;
+    padding: 5px 5px;
+    font-size: 12px;
   }
 }
 
@@ -55,6 +102,17 @@
   }
   to {
     top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes buttonAnimation {
+  from {
+    top: 85%;
+    opacity: 0;
+  }
+  to {
+    top: 75%;
     opacity: 1;
   }
 }
