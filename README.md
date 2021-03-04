@@ -1,4 +1,4 @@
-# live site hosted on netlify
+# Preview Site hosted on netlify
 https://bhagavad-gita.netlify.app/
 
 # Getting Started with Create React App
